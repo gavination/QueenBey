@@ -1,7 +1,7 @@
 # QueenBey
 A light mobile application development framework. 
 
-The Beys Coders 
+The Bey Coders 
 -
 - [Gavin Bauman]
 - [Greg Degruy]
