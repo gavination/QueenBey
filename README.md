@@ -1,7 +1,9 @@
 # QueenBey
-A light mobile application development framework. 
+A light mobile application development framework.
 
-The Bey Coders 
+[Getting Started with Hoodie]
+
+The Bey Coders
 -
 - [Gavin Bauman]
 - [Greg Degruy]
@@ -10,3 +12,5 @@ The Bey Coders
 [Gavin Bauman]: <https://github.com/gavination>
 [Greg Degruy]: <https://github.com/gregdegruy>
 [Maria Naggaga]: <https://github.com/LadyNaggaga>
+
+[Getting Started with Hoodie]: <http://docs.hood.ie/camp/start/getting-started/getting-started-1.html>
