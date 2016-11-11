@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>@hoodie/account-client</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="https://rawgit.com/boennemann/16a32e1761d69c6b18ae/raw/0ed583f4bdc27220dd34bf81a63b719f3cd585c2/bootstrap.2.3.2.docs.css">
+    <style>
+      body > .navbar .brand {
+        float:left;
+        text-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px, rgba(255, 255, 255, 0.4) 0px 0px 30px;
+        color: white;
+        margin-left:0px;
+        font-weight:normal;
+      }
+      
+      .bs-docs-sidenav.affix {
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+        z-index: 10;
+      }
+      
+      .bs-docs-sidenav i{
+        width: 8px;
+        height: 8px;
+        padding: 0px;
+        margin: 0px;
+        display: inline-block;
+        margin-right:0.5em;
+      }
+      
+      .bs-docs-sidenav > li > a {
+          word-wrap: break-word;
+      }
+      
+      .bs-docs-sidenav > li:first-child > a {
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+      }
+      
+      code[class*="language-"],pre[class*="language-"]{color:black;text-shadow:0 1px white;font-family:Consolas,Monaco,'Andale Mono',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*="language-"]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*="language-"],pre[class*="language-"]{background:#f5f2f0}:not(pre)>code[class*="language-"]{padding:.1em;border-radius:.3em}.token.comment,.token.prolog,.token.doctype,.token.cdata{color:slategray}.token.punctuation{color:#999}.namespace{opacity:.7}.token.property,.token.tag,.token.boolean,.token.number{color:#905}.token.selector,.token.attr-name,.token.string{color:#690}.token.operator,.token.entity,.token.url,.language-css .token.string,.style .token.string{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.regex,.token.important{color:#e90}.token.important{font-weight:bold}.token.entity{cursor:help}
+      div.description {margin: 14px 0; padding-top: 14px; border-bottom:1px solid #eee; }
+      .tags {}
+      .ctx-type {
+        display:inline-block;
+        margin-right:0.5em;
+        //- float:right; margin-top:8px
+      }
+      
+      footer iframe{vertical-align:middle;}
+      
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Doxx</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>@hoodie/account-client</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li class="active"><a href="index.html">Main</a></li>
+            <li><a href="admin/lib/accounts/add.js.html">admin/lib/accounts/add.js</a></li>
+            <li><a href="admin/lib/accounts/find-all.js.html">admin/lib/accounts/find-all.js</a></li>
+            <li><a href="admin/lib/accounts/find.js.html">admin/lib/accounts/find.js</a></li>
+            <li><a href="admin/lib/accounts/remove.js.html">admin/lib/accounts/remove.js</a></li>
+            <li><a href="admin/lib/accounts/update.js.html">admin/lib/accounts/update.js</a></li>
+            <li><a href="admin/lib/sessions/add.js.html">admin/lib/sessions/add.js</a></li>
+            <li><a href="lib/destroy.js.html">lib/destroy.js</a></li>
+            <li><a href="lib/events.js.html">lib/events.js</a></li>
+            <li><a href="lib/fetch.js.html">lib/fetch.js</a></li>
+            <li><a href="lib/get.js.html">lib/get.js</a></li>
+            <li><a href="lib/has-invalid-session.js.html">lib/has-invalid-session.js</a></li>
+            <li><a href="lib/id.js.html">lib/id.js</a></li>
+            <li><a href="lib/is-signed-in.js.html">lib/is-signed-in.js</a></li>
+            <li><a href="lib/profile-fetch.js.html">lib/profile-fetch.js</a></li>
+            <li><a href="lib/profile-get.js.html">lib/profile-get.js</a></li>
+            <li><a href="lib/profile-update.js.html">lib/profile-update.js</a></li>
+            <li><a href="lib/request.js.html">lib/request.js</a></li>
+            <li><a href="lib/sign-in.js.html">lib/sign-in.js</a></li>
+            <li><a href="lib/sign-out.js.html">lib/sign-out.js</a></li>
+            <li><a href="lib/sign-up.js.html">lib/sign-up.js</a></li>
+            <li><a href="lib/update.js.html">lib/update.js</a></li>
+            <li><a href="lib/username.js.html">lib/username.js</a></li>
+            <li><a href="lib/validate.js.html">lib/validate.js</a></li>
+          </ul>
+        </div>
+        <div class="span9">
+          <section id="Main"><h1>hoodie-account-client</h1>
+<blockquote>
+<p>Account client API for the browser</p></blockquote>
+<p><a href="https://travis-ci.org/hoodiehq/hoodie-account-client"><img src="https://travis-ci.org/hoodiehq/hoodie-account-client.svg?branch=master" alt="Build Status"></a><br /><a href="https://coveralls.io/r/hoodiehq/hoodie-account-client?branch=master"><img src="https://coveralls.io/repos/hoodiehq/hoodie-account-client/badge.svg?branch=master" alt="Coverage Status"></a><br /><a href="https://david-dm.org/hoodiehq/hoodie-account-client"><img src="https://david-dm.org/hoodiehq/hoodie-account-client.svg" alt="Dependency Status"></a><br /><a href="https://david-dm.org/hoodiehq/hoodie-account-client#info=devDependencies"><img src="https://david-dm.org/hoodiehq/hoodie-account-client/dev-status.svg" alt="devDependency Status"></a></p><p><code>hoodie-account-client</code> is a JavaScript client for the <a href="http://docs.accountjsonapi.apiary.io">Account JSON API</a>.<br />It persists session information in localStorage and provides front-end friendly<br />APIs for things like creating a user account, confirming, resetting a password,<br />changing profile information, or closing the account.</p><p>There is also an <a href="admin">admin-specific account client</a></p><h2>Example</h2>
+<pre><code class="lang-js">// Account loaded via &lt;script&gt; or require(&#39;@hoodie/account-client&#39;)
+var account = new Account(&#39;https://example.com/account/api&#39;)
+
+if (account.isSignedIn()) {
+  renderWelcome(account)
+}
+
+account.on(&#39;signout&#39;, redirectToHome)
+</code></pre>
+<h2>API</h2>
+<ul>
+<li><a href="#constructor">Constructor</a></li>
+<li><a href="#accountid">account.id</a></li>
+<li><a href="#accountusername">account.username</a></li>
+<li><a href="#accountvalidate">account.validate</a></li>
+<li><a href="#accountissignedin">account.isSignedIn</a></li>
+<li><a href="#accounthasinvalidsession">account.hasInvalidSession</a></li>
+<li><a href="#accountsignup">account.signUp</a></li>
+<li><a href="#accountsignin">account.signIn</a></li>
+<li><a href="#accountsignout">account.signOut</a></li>
+<li><a href="#accountdestroy">account.destroy</a></li>
+<li><a href="#accountget">account.get</a></li>
+<li><a href="#accountfetch">account.fetch</a></li>
+<li><a href="#accountupdate">account.update</a></li>
+<li><a href="#accountprofileget">account.profile.get</a></li>
+<li><a href="#accountprofilefetch">account.profile.fetch</a></li>
+<li><a href="#accountprofileupdate">account.profile.update</a></li>
+<li><a href="#accountrequest">account.request</a></li>
+<li><a href="#accounton">account.on</a></li>
+<li><a href="#accountone">account.one</a></li>
+<li><a href="#accountoff">account.off</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="#requests">Requests</a></li>
+</ul>
+<h3>Constructor</h3>
+<pre><code class="lang-js">new Account(options)
+</code></pre>
+<table><br />  <thead><br />    <tr><br />      <th>Argument</th><br />      <th>Type</th><br />      <th>Description</th><br />      <th>Required</th><br />    </tr><br />  </thead><br />  <tr><br />    <th align="left"><code>options.url</code></th><br />    <td>String</td><br />    <td>Path or full URL to root location of the account JSON API</td><br />    <td>Yes</td><br />  </tr><br />  <tr><br />    <th align="left"><code>options.id</code></th><br />    <td>String</td><br />    <td><br />      The initial account id can be passed. Useful for apps that can be used<br />      locally without an account.<br />    </td><br />    <td>Defaults to random id</td><br />  </tr><br />  <tr><br />    <th align="left"><code>options.cacheKey</code></th><br />    <td>String</td><br />    <td><br />      Name of localStorage key where to persist the session state.<br />    </td><br />    <td>Defaults to <code>\account</code></td><br />  </tr><br />  <tr><br />    <th align="left"><code>options.validate</code></th><br />    <td>Function</td><br />    <td><br />      Optional function to validate account before sending<br />      sign up / sign in / update requests<br />    </td><br />    <td>No</td><br />  </tr><br /></table>
+
+<p>Returns <code>account</code> API.</p><p>Example</p><pre><code class="lang-js">new Account({
+  url: &#39;/api&#39;,
+  id: &#39;user123&#39;,
+  cacheKey: &#39;myapp.session&#39;,
+  validate: function (options) {
+    if (options.username.length &lt; 3) {
+      throw new Error(&#39;Username must have at least 3 characters&#39;)
+    }
+  }
+})
+</code></pre>
+<h3>account.id</h3>
+<p><em>Read-only</em>. Returns the account id. If accessed for the first time, a<br />new id gets generated and persisted in localStorage.</p><h3>account.username</h3>
+<p><em>Read-only</em>. Returns the username if signed in, otherwise <code>undefined</code>.</p><h3>account.validate</h3>
+<p>Calls the function passed into the Constructor.<br />Returns a Promise that resolves to <code>true</code> by default</p><pre><code class="lang-js">account.validate(options)
+</code></pre>
+<table><br />  <thead><br />    <tr><br />      <th>Argument</th><br />      <th>Type</th><br />      <th>Required</th><br />    </tr><br />  </thead><br />  <tr><br />    <th align="left"><code>options.username</code></th><br />    <td>String</td><br />    <td>No</td><br />  </tr><br />  <tr><br />    <th align="left"><code>options.password</code></th><br />    <td>String</td><br />    <td>No</td><br />  </tr><br />  <tr><br />    <th align="left"><code>options.profile</code></th><br />    <td>Object</td><br />    <td>No</td><br />  </tr><br /></table>
+
+<p>Resolves with an argument.</p><p>Rejects with any errors thrown by the function originally passed into the Constructor.</p><p>Example</p><pre><code class="lang-js">var account = new Account({
+  url: &#39;/api&#39;,
+  cacheKey: &#39;app.session&#39;,
+  validate: function (options) {
+    if (options.password.length &lt; 8) {
+      throw new Error(&#39;password should contain at least 8 characters&#39;)
+    }
+  }
+})
+
+account.validate({
+  username: &#39;DocsChicken&#39;,
+  password: &#39;secret&#39;
+})
+
+.then(function () {
+  console.log(&#39;Successfully validated!&#39;)
+})
+
+.catch(function (error) {
+  console.log(error) // should be an error about the password being too short
+})
+</code></pre>
+<h3>account.isSignedIn</h3>
+<p>Returns <code>true</code> if user is currently signed in, otherwise <code>false</code>.</p><pre><code class="lang-js">account.isSignedIn()
+</code></pre>
+<h3>account.hasInvalidSession</h3>
+<p>Checks <code>account.session.invalid</code> property.<br />Returns <code>true</code> if user has invalid session, otherwise <code>undefined</code>.</p><pre><code class="lang-js">account.hasInvalidSession()
+</code></pre>
+<h3>account.signUp</h3>
+<p>Creates a new user account on the Hoodie server. Does <em>not</em> sign in the user automatically, <a href="#accountsignin">account.signIn</a> must be called separately.</p><pre><code class="lang-js">account.signUp(accountProperties)
+</code></pre>
+<table><br />  <thead><br />    <tr><br />      <th>Argument</th><br />      <th>Type</th><br />      <th>Required</th><br />    </tr><br />  </thead><br />  <tr><br />    <th align="left"><code>accountProperties.username</code></th><br />    <td>String</td><br />    <td>Yes</td><br />  </tr><br />  <tr><br />    <th align="left"><code>accountProperties.password</code></th><br />    <td>String</td><br />    <td>Yes</td><br />  </tr><br /></table>
+
+<p>Resolves with <code>accountProperties</code>:</p><pre><code class="lang-json">{
+  &quot;id&quot;: &quot;account123&quot;,
+  &quot;username&quot;: &quot;pat&quot;,
+  &quot;createdAt&quot;: &quot;2016-01-01T00:00.000Z&quot;,
+  &quot;updatedAt&quot;: &quot;2016-01-01T00:00.000Z&quot;
+}
+</code></pre>
+<p>Rejects with:</p><table><br />  <tr><br />    <th align="left"><code>InvalidError</code></th><br />    <td>Username must be set</td><br />  </tr><br />  <tr><br />    <th align="left"><code>SessionError</code></th><br />    <td>Must sign out first</td><br />  </tr><br />  <tr><br />    <th align="left"><code>ConflictError</code></th><br />    <td>Username <strong>&lt;username&gt;</strong> already exists</td><br />  </tr><br />  <tr><br />    <th align="left"><code>ConnectionError</code></th><br />    <td>Could not connect to server</td><br />  </tr><br /></table>
+
+<p>Example</p><pre><code class="lang-js">account.signUp({
+  username: &#39;pat&#39;,
+  password: &#39;secret&#39;
+}).then(function (accountProperties) {
+  alert(&#39;Account created for &#39; + accountProperties.username)
+}).catch(function (error) {
+  alert(error)
+})
+</code></pre>
+<hr>
+<p>🐕 <strong>Implement account.signUp with profile: {...} option</strong>: <a href="https://github.com/hoodiehq/hoodie-account-client/issues/11">#11</a></p><hr>
+<h3>account.signIn</h3>
+<p>Creates a user session</p><pre><code class="lang-js">account.signIn(options)
+</code></pre>
+<table><br />  <thead><br />    <tr><br />      <th>Argument</th><br />      <th>Type</th><br />      <th>Description</th><br />      <th>Required</th><br />    </tr><br />  </thead><br />  <tr><br />    <th align="left"><code>options.username</code></th><br />    <td>String</td><br />    <td>-</td><br />    <td>Yes</td><br />  </tr><br />  <tr><br />    <th align="left"><code>options.password</code></th><br />    <td>String</td><br />    <td>-</td><br />    <td>Yes</td><br />  </tr><br /></table>
+
+<p>Resolves with <code>accountProperties</code>:</p><pre><code class="lang-json">{
+  &quot;id&quot;: &quot;account123&quot;,
+  &quot;username&quot;: &quot;pat&quot;,
+  &quot;createdAt&quot;: &quot;2016-01-01T00:00.000Z&quot;,
+  &quot;updatedAt&quot;: &quot;2016-01-02T00:00.000Z&quot;,
+  &quot;profile&quot;: {
+    &quot;fullname&quot;: &quot;Dr. Pat Hook&quot;
+  }
+}
+</code></pre>
+<p>Rejects with:</p><table><br />  <tr><br />    <th align="left"><code>UnconfirmedError</code></th><br />    <td>Account has not been confirmed yet</td><br />  </tr><br />  <tr><br />    <th align="left"><code>UnauthorizedError</code></th><br />    <td>Invalid Credentials</td><br />  </tr><br />  <tr><br />    <th align="left"><code>Error</code></th><br />    <td><em>A custom error set on the account object, e.g. the account could be blocked due to missing payments</em></td><br />  </tr><br />  <tr><br />    <th align="left"><code>ConnectionError</code></th><br />    <td>Could not connect to server</td><br />  </tr><br /></table>
+
+<p>Example</p><pre><code class="lang-js">account.signIn({
+  username: &#39;pat&#39;,
+  password: &#39;secret&#39;
+}).then(function (sessionProperties) {
+  alert(&#39;Ohaj, &#39; + sessionProperties.account.username)
+}).catch(function (error) {
+  alert(error)
+})
+</code></pre>
+<h3>account.signOut</h3>
+<p>Deletes the user’s session</p><pre><code class="lang-js">account.signOut()
+</code></pre>
+<p>Resolves with <code>sessionProperties</code> like <a href="#accountsignin">account.signin</a>,<br />but without the session id:</p><pre><code class="lang-json">{
+  &quot;account&quot;: {
+    &quot;id&quot;: &quot;account123&quot;,
+    &quot;username&quot;: &quot;pat&quot;,
+    &quot;createdAt&quot;: &quot;2016-01-01T00:00.000Z&quot;,
+    &quot;updatedAt&quot;: &quot;2016-01-02T00:00.000Z&quot;,
+    &quot;profile&quot;: {
+      &quot;fullname&quot;: &quot;Dr. Pat Hook&quot;
+    }
+  }
+}
+</code></pre>
+<p>Rejects with:</p><table><br />  <tr><br />    <th align="left"><code>Error</code></th><br />    <td><em>A custom error thrown in a <code>before:signout</code> hook</em></td><br />  </tr><br /></table>
+
+<p>Example</p><pre><code class="lang-js">account.signOut().then(function (sessionProperties) {
+  alert(&#39;Bye, &#39; + sessionProperties.account.username)
+}).catch(function (error) {
+  alert(error)
+})
+</code></pre>
+<h3>account.destroy</h3>
+<p>Destroys the account of the currently signed in user.</p><pre><code class="lang-js">account.destroy()
+</code></pre>
+<p>Resolves with <code>sessionProperties</code> like <a href="#accountsignin">account.signin</a>,<br />but without the session id:</p><pre><code class="lang-json">{
+  &quot;account&quot;: {
+    &quot;id&quot;: &quot;account123&quot;,
+    &quot;username&quot;: &quot;pat&quot;,
+    &quot;createdAt&quot;: &quot;2016-01-01T00:00.000Z&quot;,
+    &quot;updatedAt&quot;: &quot;2016-01-02T00:00.000Z&quot;,
+    &quot;profile&quot;: {
+      &quot;fullname&quot;: &quot;Dr. Pat Hook&quot;
+    }
+  }
+}
+</code></pre>
+<p>Rejects with:</p><table><br />  <tr><br />    <th align="left"><code>Error</code></th><br />    <td><em>A custom error thrown in a <code>before:destroy</code> hook</em></td><br />  </tr><br />  <tr><br />    <th align="left"><code>ConnectionError</code></th><br />    <td>Could not connect to server</td><br />  </tr><br /></table>
+
+<p>Example</p><pre><code class="lang-js">account.destroy().then(function (sessionProperties) {
+  alert(&#39;Bye, &#39; + sessionProperties.account.username)
+}).catch(function (error) {
+  alert(error)
+})
+</code></pre>
+<h3>account.get</h3>
+<p>Returns account properties from local cache.</p><pre><code class="lang-js">account.get(properties)
+</code></pre>
+<table><br />  <thead><br />    <tr><br />      <th>Argument</th><br />      <th>Type</th><br />      <th>Description</th><br />      <th>Required</th><br />    </tr><br />  </thead><br />  <tr><br />    <th align="left"><code>properties</code></th><br />    <td>String or Array of strings</td><br />    <td><br />      When String, only this property gets returned. If array of strings,<br />      only passed properties get returned<br />    </td><br />    <td>No</td><br />  </tr><br /></table>
+
+<p>Returns object with account properties, or <code>undefined</code> if not signed in.</p><p>Examples</p><pre><code class="lang-js">var properties = account.get()
+alert(&#39;You signed up at &#39; + properties.createdAt)
+var createdAt = account.get(&#39;createdAt&#39;)
+alert(&#39;You signed up at &#39; + createdAt)
+var properties = account.get([&#39;createdAt&#39;, &#39;updatedAt&#39;])
+alert(&#39;You signed up at &#39; + properties.createdAt)
+</code></pre>
+<h3>account.fetch</h3>
+<p>Fetches account properties from server.</p><pre><code class="lang-js">account.fetch(properties)
+</code></pre>
+<table><br />  <thead><br />    <tr><br />      <th>Argument</th><br />      <th>Type</th><br />      <th>Description</th><br />      <th>Required</th><br />    </tr><br />  </thead><br />  <tr><br />    <th align="left"><code>properties</code></th><br />    <td>String or Array of strings</td><br />    <td><br />      When String, only this property gets returned. If array of strings,<br />      only passed properties get returned. Property names can have <code>.</code> separators<br />      to return nested properties.<br />    </td><br />    <td>No</td><br />  </tr><br /></table>
+
+<p>Resolves with <code>accountProperties</code>:</p><pre><code class="lang-json">{
+  &quot;id&quot;: &quot;account123&quot;,
+  &quot;username&quot;: &quot;pat&quot;,
+  &quot;createdAt&quot;: &quot;2016-01-01T00:00.000Z&quot;,
+  &quot;updatedAt&quot;: &quot;2016-01-02T00:00.000Z&quot;
+}
+</code></pre>
+<p>Rejects with:</p><table><br />  <tr><br />    <th align="left"><code>UnauthenticatedError</code></th><br />    <td>Session is invalid</td><br />  </tr><br />  <tr><br />    <th align="left"><code>ConnectionError</code></th><br />    <td>Could not connect to server</td><br />  </tr><br /></table>
+
+<p>Examples</p><pre><code class="lang-js">account.fetch().then(function (properties) {
+  alert(&#39;You signed up at &#39; + properties.createdAt)
+})
+account.fetch(&#39;createdAt&#39;).then(function (createdAt) {
+  alert(&#39;You signed up at &#39; + createdAt)
+})
+account.fetch([&#39;createdAt&#39;, &#39;updatedAt&#39;]).then(function (properties) {
+  alert(&#39;You signed up at &#39; + properties.createdAt)
+})
+</code></pre>
+<h3>account.update</h3>
+<p>Update account properties on server and local cache</p><pre><code class="lang-js">account.update(changedProperties)
+</code></pre>
+<table><br />  <thead><br />    <tr><br />      <th>Argument</th><br />      <th>Type</th><br />      <th>Description</th><br />      <th>Required</th><br />    </tr><br />  </thead><br />  <tr><br />    <th align="left"><code>changedProperties</code></th><br />    <td>Object</td><br />    <td><br />      Object of properties &amp; values that changed.<br />      Other properties remain unchanged.<br />    </td><br />    <td>No</td><br />  </tr><br /></table>
+
+<p>Resolves with <code>accountProperties</code>:</p><pre><code class="lang-json">{
+  &quot;id&quot;: &quot;account123&quot;,
+  &quot;username&quot;: &quot;pat&quot;,
+  &quot;createdAt&quot;: &quot;2016-01-01T00:00.000Z&quot;,
+  &quot;updatedAt&quot;: &quot;2016-01-01T00:00.000Z&quot;
+}
+</code></pre>
+<p>Rejects with:</p><table><br />  <tr><br />    <th align="left"><code>UnauthenticatedError</code></th><br />    <td>Session is invalid</td><br />  </tr><br />  <tr><br />    <th align="left"><code>InvalidError</code></th><br />    <td><em>Custom validation error</em></td><br />  </tr><br />  <tr><br />    <th align="left"><code>ConflictError</code></th><br />    <td>Username <strong>&lt;username&gt;</strong> already exists</td><br />  </tr><br />  <tr><br />    <th align="left"><code>ConnectionError</code></th><br />    <td>Could not connect to server</td><br />  </tr><br /></table>
+
+<p>Example</p><pre><code class="lang-js">account.update({username: &#39;treetrunks&#39;}).then(function (properties) {
+  alert(&#39;You are now known as &#39; + properties.username)
+})
+</code></pre>
+<h3>account.profile.get</h3>
+<pre><code class="lang-js">account.profile.get()
+</code></pre>
+<p>Returns profile properties from local cache.</p><pre><code class="lang-js">account.profile.get(properties)
+</code></pre>
+<table><br />  <thead><br />    <tr><br />      <th>Argument</th><br />      <th>Type</th><br />      <th>Description</th><br />      <th>Required</th><br />    </tr><br />  </thead><br />  <tr><br />    <th align="left"><code>properties</code></th><br />    <td>String or Array of strings</td><br />    <td><br />      When String, only this property gets returned. If array of strings,<br />      only passed properties get returned. Property names can have <code>.</code> separators<br />      to return nested properties.<br />    </td><br />    <td>No</td><br />  </tr><br /></table>
+
+<p>Returns object with profile properties, falls back to empty object <code>{}</code>.<br />Returns <code>undefined</code> if not signed in.</p><p>Examples</p><pre><code class="lang-js">var properties = account.profile.get()
+alert(&#39;Hey there &#39; + properties.fullname)
+var fullname = account.profile.get(&#39;fullname&#39;)
+alert(&#39;Hey there &#39; + fullname)
+var properties = account.profile.get([&#39;fullname&#39;, &#39;address.city&#39;])
+alert(&#39;Hey there &#39; + properties.fullname + &#39;. How is &#39; + properties.address.city + &#39;?&#39;)
+</code></pre>
+<h3>account.profile.fetch</h3>
+<p>Fetches profile properties from server.</p><pre><code class="lang-js">account.profile.fetch(options)
+</code></pre>
+<table><br />  <thead><br />    <tr><br />      <th>Argument</th><br />      <th>Type</th><br />      <th>Description</th><br />      <th>Required</th><br />    </tr><br />  </thead><br />  <tr><br />    <th align="left"><code>properties</code></th><br />    <td>String or Array of strings</td><br />    <td><br />      When String, only this property gets returned. If array of strings,<br />      only passed properties get returned. Property names can have <code>.</code> separators<br />      to return nested properties.<br />    </td><br />    <td>No</td><br />  </tr><br /></table>
+
+<p>Resolves with <code>profileProperties</code>:</p><pre><code class="lang-json">{
+  &quot;id&quot;: &quot;account123-profile&quot;,
+  &quot;fullname&quot;: &quot;Dr Pat Hook&quot;,
+  &quot;address&quot;: {
+    &quot;city&quot;: &quot;Berlin&quot;,
+    &quot;street&quot;: &quot;Adalberststraße 4a&quot;
+  }
+}
+</code></pre>
+<p>Rejects with:</p><table><br />  <tr><br />    <th align="left"><code>UnauthenticatedError</code></th><br />    <td>Session is invalid</td><br />  </tr><br />  <tr><br />    <th align="left"><code>ConnectionError</code></th><br />    <td>Could not connect to server</td><br />  </tr><br /></table>
+
+<p>Examples</p><pre><code class="lang-js">account.fetch().then(function (properties) {
+  alert(&#39;Hey there &#39; + properties.fullname)
+})
+account.fetch(&#39;fullname&#39;).then(function (fullname) {
+  alert(&#39;Hey there &#39; + fullname)
+})
+account.fetch([&#39;fullname&#39;, &#39;address.city&#39;]).then(function (properties) {
+  alert(&#39;Hey there &#39; + properties.fullname + &#39;. How is &#39; + properties.address.city + &#39;?&#39;)
+})
+</code></pre>
+<h3>account.profile.update</h3>
+<p>Update profile properties on server and local cache</p><pre><code class="lang-js">account.profile.update(changedProperties)
+</code></pre>
+<table><br />  <thead><br />    <tr><br />      <th>Argument</th><br />      <th>Type</th><br />      <th>Description</th><br />      <th>Required</th><br />    </tr><br />  </thead><br />  <tr><br />    <th align="left"><code>changedProperties</code></th><br />    <td>Object</td><br />    <td><br />      Object of properties &amp; values that changed.<br />      Other properties remain unchanged.<br />    </td><br />    <td>No</td><br />  </tr><br /></table>
+
+<p>Resolves with <code>profileProperties</code>:</p><pre><code class="lang-json">{
+  &quot;id&quot;: &quot;account123-profile&quot;,
+  &quot;fullname&quot;: &quot;Dr Pat Hook&quot;,
+  &quot;address&quot;: {
+    &quot;city&quot;: &quot;Berlin&quot;,
+    &quot;street&quot;: &quot;Adalberststraße 4a&quot;
+  }
+}
+</code></pre>
+<p>Rejects with:</p><table><br />  <tr><br />    <th align="left"><code>UnauthenticatedError</code></th><br />    <td>Session is invalid</td><br />  </tr><br />  <tr><br />    <th align="left"><code>InvalidError</code></th><br />    <td><em>Custom validation error</em></td><br />  </tr><br />  <tr><br />    <th align="left"><code>ConnectionError</code></th><br />    <td>Could not connect to server</td><br />  </tr><br /></table>
+
+<p>Example</p><pre><code class="lang-js">account.profile.update({fullname: &#39;Prof Pat Hook&#39;}).then(function (properties) {
+  alert(&#39;Congratulations, &#39; + properties.fullname)
+})
+</code></pre>
+<h3>account.request</h3>
+<p>Sends a custom request to the server, for things like password resets,<br />account upgrades, etc.</p><pre><code class="lang-js">account.request(properties)
+</code></pre>
+<table><br />  <thead><br />    <tr><br />      <th>Argument</th><br />      <th>Type</th><br />      <th>Description</th><br />      <th>Required</th><br />    </tr><br />  </thead><br />  <tr><br />    <th align="left"><code>properties.type</code></th><br />    <td>String</td><br />    <td><br />      Name of the request type, e.g. &quot;passwordreset&quot;<br />    </td><br />    <td>Yes</td><br />  </tr><br />  <tr><br />    <th align="left"><code>properties</code></th><br />    <td>Object</td><br />    <td><br />      Additional properties for the request<br />    </td><br />    <td>No</td><br />  </tr><br /></table>
+
+<p>Resolves with <code>requestProperties</code>:</p><pre><code class="lang-json">{
+  &quot;id&quot;: &quot;request123&quot;,
+  &quot;type&quot;: &quot;passwordreset&quot;,
+  &quot;contact&quot;: &quot;pat@example.com&quot;,
+  &quot;createdAt&quot;: &quot;2016-01-01T00:00.000Z&quot;,
+  &quot;updatedAt&quot;: &quot;2016-01-01T00:00.000Z&quot;
+}
+</code></pre>
+<p>Rejects with:</p><table><br />  <tr><br />    <th align="left"><code>ConnectionError</code></th><br />    <td>Could not connect to server</td><br />  </tr><br />  <tr><br />    <th align="left"><code>NotFoundError</code></th><br />    <td>Handler missing for &quot;passwordreset&quot;</td><br />  </tr><br />  <tr><br />    <th align="left"><code>InvalidError</code></th><br />    <td><em>Custom validation error</em></td><br />  </tr><br /></table>
+
+<p>Example</p><pre><code class="lang-js">account.request({type: &#39;passwordreset&#39;, contact: &#39;pat@example.com&#39;}).then(function (properties) {
+  alert(&#39;A password reset link was sent to &#39; + properties.contact)
+})
+</code></pre>
+<h3>account.on</h3>
+<pre><code class="lang-js">account.on(event, handler)
+</code></pre>
+<p>Example</p><pre><code class="lang-js">account.on(&#39;signin&#39;, function (accountProperties) {
+  alert(&#39;Hello there, &#39; + accountProperties.username)
+})
+</code></pre>
+<h3>account.one</h3>
+<p>Call function once at given account event.</p><pre><code class="lang-js">account.one(event, handler)
+</code></pre>
+<p>Example</p><pre><code class="lang-js">account.one(&#39;signin&#39;, function (accountProperties) {
+  alert(&#39;Hello there, &#39; + accountProperties.username)
+})
+</code></pre>
+<h3>account.off</h3>
+<p>Removes event handler that has been added before</p><pre><code class="lang-js">account.off(event, handler)
+</code></pre>
+<p>Example</p><pre><code class="lang-js">hoodie.off(&#39;connectionstatus:disconnected&#39;, showNotification)
+</code></pre>
+<h3>Events</h3>
+<table><br />  <thead><br />    <tr><br />      <th align="left"><br />        Event<br />      </th><br />      <th align="left"><br />        Description<br />      </th><br />      <th align="left"><br />        Arguments<br />      </th><br />    </tr><br />  </thead><br />  <tr><br />    <th align="left"><code>signup</code></th><br />    <td>New user account created successfully</td><br />    <td><code>accountProperties</code> with <code>.session</code> property</td><br />  </tr><br />  <tr><br />    <th align="left"><code>signin</code></th><br />    <td>Successfully signed in to an account</td><br />    <td><code>accountProperties</code> with <code>.session</code> property</td><br />  </tr><br />  <tr><br />    <th align="left"><code>signout</code></th><br />    <td>Successfully signed out</td><br />    <td><code>accountProperties</code> with <code>.session</code> property</td><br />  </tr><br />  <tr><br />    <th align="left"><code>passwordreset</code></th><br />    <td>Email with password reset token sent</td><br />    <td></td><br />  </tr><br />  <tr><br />    <th align="left"><code>unauthenticate</code></th><br />    <td><br />      Server responded with &quot;unauthenticated&quot; when checking session<br />    </td><br />    <td></td><br />  </tr><br />  <tr><br />    <th align="left"><code>reauthenticate</code></th><br />    <td><br />      Successfully signed in with the same username (useful when session has expired)<br />    </td><br />    <td><code>accountProperties</code> with <code>.session</code> property</td><br />  </tr><br />  <tr><br />    <th align="left"><code>update</code></th><br />    <td><br />      Successfully updated an account&#39;s properties<br />    </td><br />    <td><code>accountProperties</code> with <code>.session</code> property</td><br />  </tr><br /></table>
+
+<h3>Requests</h3>
+<p>Hoodie comes with a list of built-in account requests, which can be disabled,<br />overwritten or extended in <a href="https://github.com/hoodiehq/hoodie-account-server/tree/master/plugin#optionsrequests">hoodie-account-server</a></p><p>When a request succeeds, an event with the same name as the request type gets<br />emitted. For example, <code>account.request({type: &#39;passwordreset&#39;, contact: &#39;pat@example.com&#39;)</code><br />triggers a <code>passwordreset</code> event, with the <code>requestProperties</code> passed as argument.</p><table><br />  <tr><br />    <th align="left"><code>passwordreset</code></th><br />    <td>Request a password reset token</td><br />  </tr><br /></table>
+
+<h2>Testing</h2>
+<p>Local setup</p><pre><code>git clone https://github.com/hoodiehq/hoodie-account-client.git
+cd hoodie-account-client
+npm install
+</code></pre><p>In Node.js</p><p>Run all tests and validate JavaScript Code Style using <a href="https://www.npmjs.com/package/standard">standard</a></p><pre><code>npm test
+</code></pre><p>To run only the tests</p><pre><code>npm run test:node
+</code></pre><p>To test hoodie-account-client in a browser you can link it into <a href="https://github.com/hoodiehq/hoodie-account">hoodie-account</a>, which provides a dev-server:</p><pre><code>git clone https://github.com/hoodiehq/hoodie-account.git
+cd hoodie-account
+npm install
+npm link /path/to/hoodie-account-client
+npm start
+</code></pre><p>hoodie-account bundles hoodie-account-client on <code>npm start</code>, so you need to restart hoodie-account to see your changes.</p><h2>Contributing</h2>
+<p>Have a look at the Hoodie project&#39;s <a href="https://github.com/hoodiehq/hoodie/blob/master/CONTRIBUTING.md">contribution guidelines</a>.<br />If you want to hang out you can join our <a href="http://hood.ie/chat/">Hoodie Community Chat</a>.</p><h2>License</h2>
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a></p></section>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with <a href="https://github.com/FGRibreau/doxx">Doxx</a> created by <a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau</a></p>
+        <p>Doxx is sponsored by <a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr</a> and <a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="https://leaverou.github.io/prefixfree/prefixfree.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script>
+      /**
+       * Prism: Lightweight, robust, elegant syntax highlighting
+       * MIT license http://www.opensource.org/licenses/mit-license.php/
+       * @author Lea Verou http://lea.verou.me
+       */(function(){var e=/\blang(?:uage)?-(?!\*)(\w+)\b/i,t=self.Prism={util:{type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},clone:function(e){var n=t.util.type(e);switch(n){case"Object":var r={};for(var i in e)e.hasOwnProperty(i)&&(r[i]=t.util.clone(e[i]));return r;case"Array":return e.slice()}return e}},languages:{extend:function(e,n){var r=t.util.clone(t.languages[e]);for(var i in n)r[i]=n[i];return r},insertBefore:function(e,n,r,i){i=i||t.languages;var s=i[e],o={};for(var u in s)if(s.hasOwnProperty(u)){if(u==n)for(var a in r)r.hasOwnProperty(a)&&(o[a]=r[a]);o[u]=s[u]}return i[e]=o},DFS:function(e,n){for(var r in e){n.call(e,r,e[r]);t.util.type(e)==="Object"&&t.languages.DFS(e[r],n)}}},highlightAll:function(e,n){var r=document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code');for(var i=0,s;s=r[i++];)t.highlightElement(s,e===!0,n)},highlightElement:function(r,i,s){var o,u,a=r;while(a&&!e.test(a.className))a=a.parentNode;if(a){o=(a.className.match(e)||[,""])[1];u=t.languages[o]}if(!u)return;r.className=r.className.replace(e,"").replace(/\s+/g," ")+" language-"+o;a=r.parentNode;/pre/i.test(a.nodeName)&&(a.className=a.className.replace(e,"").replace(/\s+/g," ")+" language-"+o);var f=r.textContent;if(!f)return;f=f.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\u00a0/g," ");var l={element:r,language:o,grammar:u,code:f};t.hooks.run("before-highlight",l);if(i&&self.Worker){var c=new Worker(t.filename);c.onmessage=function(e){l.highlightedCode=n.stringify(JSON.parse(e.data));l.element.innerHTML=l.highlightedCode;s&&s.call(l.element);t.hooks.run("after-highlight",l)};c.postMessage(JSON.stringify({language:l.language,code:l.code}))}else{l.highlightedCode=t.highlight(l.code,l.grammar);l.element.innerHTML=l.highlightedCode;s&&s.call(r);t.hooks.run("after-highlight",l)}},highlight:function(e,r){return n.stringify(t.tokenize(e,r))},tokenize:function(e,n){var r=t.Token,i=[e],s=n.rest;if(s){for(var o in s)n[o]=s[o];delete n.rest}e:for(var o in n){if(!n.hasOwnProperty(o)||!n[o])continue;var u=n[o],a=u.inside,f=!!u.lookbehind||0;u=u.pattern||u;for(var l=0;l<i.length;l++){var c=i[l];if(i.length>e.length)break e;if(c instanceof r)continue;u.lastIndex=0;var h=u.exec(c);if(h){f&&(f=h[1].length);var p=h.index-1+f,h=h[0].slice(f),d=h.length,v=p+d,m=c.slice(0,p+1),g=c.slice(v+1),y=[l,1];m&&y.push(m);var b=new r(o,a?t.tokenize(h,a):h);y.push(b);g&&y.push(g);Array.prototype.splice.apply(i,y)}}}return i},hooks:{all:{},add:function(e,n){var r=t.hooks.all;r[e]=r[e]||[];r[e].push(n)},run:function(e,n){var r=t.hooks.all[e];if(!r||!r.length)return;for(var i=0,s;s=r[i++];)s(n)}}},n=t.Token=function(e,t){this.type=e;this.content=t};n.stringify=function(e){if(typeof e=="string")return e;if(Object.prototype.toString.call(e)=="[object Array]"){for(var r=0;r<e.length;r++)e[r]=n.stringify(e[r]);return e.join("")}var i={type:e.type,content:n.stringify(e.content),tag:"span",classes:["token",e.type],attributes:{}};i.type=="comment"&&(i.attributes.spellcheck="true");t.hooks.run("wrap",i);var s="";for(var o in i.attributes)s+=o+'="'+(i.attributes[o]||"")+'"';return"<"+i.tag+' class="'+i.classes.join(" ")+'" '+s+">"+i.content+"</"+i.tag+">"};if(!self.document){self.addEventListener("message",function(e){var n=JSON.parse(e.data),r=n.language,i=n.code;self.postMessage(JSON.stringify(t.tokenize(i,t.languages[r])));self.close()},!1);return}var r=document.getElementsByTagName("script");r=r[r.length-1];if(r){t.filename=r.src;document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",t.highlightAll)}})();;
+      Prism.languages.markup={comment:/&lt;!--[\w\W]*?--(&gt;|&gt;)/g,prolog:/&lt;\?.+?\?&gt;/,doctype:/&lt;!DOCTYPE.+?&gt;/,cdata:/&lt;!\[CDATA\[[\w\W]+?]]&gt;/i,tag:{pattern:/&lt;\/?[\w:-]+\s*(?:\s+[\w:-]+(?:=(?:("|')(\\?[\w\W])*?\1|\w+))?\s*)*\/?&gt;/gi,inside:{tag:{pattern:/^&lt;\/?[\w:-]+/i,inside:{punctuation:/^&lt;\/?/,namespace:/^[\w-]+?:/}},"attr-value":{pattern:/=(?:('|")[\w\W]*?(\1)|[^\s>]+)/gi,inside:{punctuation:/=|&gt;|"/g}},punctuation:/\/?&gt;/g,"attr-name":{pattern:/[\w:-]+/g,inside:{namespace:/^[\w-]+?:/}}}},entity:/&amp;#?[\da-z]{1,8};/gi};Prism.hooks.add("wrap",function(e){e.type==="entity"&&(e.attributes.title=e.content.replace(/&amp;/,"&"))});;
+      Prism.languages.css={comment:/\/\*[\w\W]*?\*\//g,atrule:/@[\w-]+?(\s+[^;{]+)?(?=\s*{|\s*;)/gi,url:/url\((["']?).*?\1\)/gi,selector:/[^\{\}\s][^\{\}]*(?=\s*\{)/g,property:/(\b|\B)[a-z-]+(?=\s*:)/ig,string:/("|')(\\?.)*?\1/g,important:/\B!important\b/gi,ignore:/&(lt|gt|amp);/gi,punctuation:/[\{\};:]/g};Prism.languages.markup&&Prism.languages.insertBefore("markup","tag",{style:{pattern:/(&lt;|<)style[\w\W]*?(>|&gt;)[\w\W]*?(&lt;|<)\/style(>|&gt;)/ig,inside:{tag:{pattern:/(&lt;|<)style[\w\W]*?(>|&gt;)|(&lt;|<)\/style(>|&gt;)/ig,inside:Prism.languages.markup.tag.inside},rest:Prism.languages.css}}});;
+      Prism.languages.clike={comment:{pattern:/(^|[^\\])(\/\*[\w\W]*?\*\/|\/\/.*?(\r?\n|$))/g,lookbehind:!0},string:/("|')(\\?.)*?\1/g,keyword:/\b(if|else|while|do|for|return|in|instanceof|function|new|try|catch|finally|null|break|continue)\b/g,"boolean":/\b(true|false)\b/g,number:/\b-?(0x)?\d*\.?[\da-f]+\b/g,operator:/[-+]{1,2}|!|=?&lt;|=?&gt;|={1,2}|(&amp;){1,2}|\|?\||\?|\*|\//g,ignore:/&(lt|gt|amp);/gi,punctuation:/[{}[\];(),.:]/g};;
+      Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(var|let|if|else|while|do|for|return|in|instanceof|function|new|with|typeof|try|catch|finally|null|break|continue)\b/g,number:/\b(-?(0x)?\d*\.?[\da-f]+|NaN|-?Infinity)\b/g});Prism.languages.insertBefore("javascript","keyword",{regex:{pattern:/(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/g,lookbehind:!0}});Prism.languages.markup&&Prism.languages.insertBefore("markup","tag",{script:{pattern:/(&lt;|<)script[\w\W]*?(>|&gt;)[\w\W]*?(&lt;|<)\/script(>|&gt;)/ig,inside:{tag:{pattern:/(&lt;|<)script[\w\W]*?(>|&gt;)|(&lt;|<)\/script(>|&gt;)/ig,inside:Prism.languages.markup.tag.inside},rest:Prism.languages.javascript}}});;
+    </script>
+  </body>
+</html>
